@@ -13,12 +13,12 @@ function changeColor(element, numbers){
     /*
     @param numbers: maximum length of the array should be 8
      */
-    let hexNums = []
+    let hexNums = [];
     numbers.forEach(element => {
         let temp = deciToHex(element)
-        hexNums.push(temp)       
+        hexNums.push(temp);       
     });
-    number = hexNums.join("")
+    let number = hexNums.join("");
     element.style.color = "#"+number;
 }
 
@@ -42,7 +42,11 @@ function updateCurrentTime(id){
     let hour = zeroBehind(date.getHours());
     let minutes = zeroBehind(date.getMinutes());
     let seconds = zeroBehind(date.getSeconds());
-    let ms = date.getMilliseconds()
+    let ms = date.getMilliseconds();
+    ms = ms % 16;
+    
+    if(ms<6)
+        ms = 6;
 
     var el = document.getElementById(id);
     el.textContent = dayMonth + "/" + month + "/" + year + " " + days[day] + " " + hour + ":" + minutes + ":" + seconds;
