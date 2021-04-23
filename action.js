@@ -45,8 +45,8 @@ function updateCurrentTime(id){
     let ms = date.getMilliseconds();
     ms = ms % 16;
     
-    if(ms<6)
-        ms = 6;
+    if(ms<8)
+        ms = 8;
 
     var el = document.getElementById(id);
     el.textContent = dayMonth + "/" + month + "/" + year + " " + days[day] + " " + hour + ":" + minutes + ":" + seconds;
