@@ -54,5 +54,6 @@ function updateCurrentTime(id){
     changeColor(el, [dayMonth, month, year, day, hour, minutes, seconds, ms]);
 }
 
+updateCurrentTime("time");
 setInterval(updateCurrentTime, 1000, "time");
 
