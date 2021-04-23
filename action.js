@@ -11,7 +11,7 @@ function deciToHex(num){
 
 function changeColor(element, numbers){
     /*
-    @param numbers: maximum length of the array should be 6
+    @param numbers: maximum length of the array should be 8
      */
     let hexNums = []
     numbers.forEach(element => {
@@ -42,11 +42,12 @@ function updateCurrentTime(id){
     let hour = zeroBehind(date.getHours());
     let minutes = zeroBehind(date.getMinutes());
     let seconds = zeroBehind(date.getSeconds());
+    let ms = date.getMilliseconds()
 
     var el = document.getElementById(id);
     el.textContent = dayMonth + "/" + month + "/" + year + " " + days[day] + " " + hour + ":" + minutes + ":" + seconds;
 
-    changeColor(el, [dayMonth, month, day, hour, minutes, seconds]);
+    changeColor(el, [dayMonth, month, year, day, hour, minutes, seconds, ms]);
 }
 
 setInterval(updateCurrentTime, 1000, "time");
