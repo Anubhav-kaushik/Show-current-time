@@ -1,0 +1,19 @@
+.name {
+    margin: 10px auto;
+    display: grid;
+    align-items: center;
+}
+
+.name>h2 {
+    margin: 10px auto;
+}
+
+.currentTime {
+    margin: 30vh auto;
+    display: grid;
+    align-items: center;
+}
+
+.currentTime>h1 {
+    margin: 10px auto;
+}
